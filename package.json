@@ -1,0 +1,26 @@
+{
+  "name": "luxurystay-hospitality",
+  "version": "1.0.0",
+  "description": "Hotel Management System for LuxuryStay Hospitality",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "nodemon backend/server.js",
+    "client": "cd frontend && npm start",
+    "devall": "concurrently \"npm run dev\" \"npm run client\"",
+    "install-client": "cd frontend && npm install",
+    "install-server": "cd backend && npm install"
+  },
+  "keywords": [
+    "hotel",
+    "management",
+    "mern",
+    "hospitality"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
+

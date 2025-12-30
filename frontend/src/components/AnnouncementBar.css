@@ -1,0 +1,38 @@
+.announcement-bar {
+  background-color: #ffd700; /* Yellow background from image */
+  color: #1a1a1a;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 10px 0;
+  font-weight: bold;
+  font-size: 14px;
+  position: relative;
+  z-index: 1001; /* Above navbar */
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.announcement-content {
+  display: inline-block;
+  animation: scroll-left 20s linear infinite;
+  white-space: nowrap;
+}
+
+.announcement-content span {
+  display: inline-block;
+  padding-right: 50px; /* Space between repeated text */
+}
+
+/* Keyframes for scrolling animation */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Pause on hover for readability */
+.announcement-bar:hover .announcement-content {
+  animation-play-state: paused;
+}

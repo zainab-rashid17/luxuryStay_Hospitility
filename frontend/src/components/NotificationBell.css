@@ -1,0 +1,231 @@
+.notification-bell-container {
+  position: relative;
+  margin-right: 15px;
+}
+
+/* AdminLayout sidebar notification styling */
+.admin-sidebar-actions .notification-bell-container {
+  margin-right: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.admin-sidebar-actions .notification-bell-btn {
+  color: #ffc107 !important;
+  padding: 8px;
+}
+
+.admin-sidebar-actions .notification-bell-btn svg {
+  stroke: #ffc107;
+}
+
+.admin-sidebar-actions .notification-bell-btn:hover {
+  background-color: rgba(255, 193, 7, 0.2);
+}
+
+/* AdminLayout header notification styling */
+.admin-header-right .notification-bell-container {
+  margin-right: 0;
+}
+
+.admin-header-right .notification-bell-btn {
+  color: #ffc107 !important;
+}
+
+.admin-header-right .notification-bell-btn svg {
+  stroke: #ffc107;
+}
+
+.notification-bell-btn {
+  position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  color: #ffc107 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+  border-radius: 4px;
+}
+
+.notification-bell-btn:hover {
+  background-color: rgba(255, 193, 7, 0.2);
+  color: #ffc107 !important;
+}
+
+.notification-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #dc3545;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: bold;
+  border: 2px solid white;
+}
+
+.notification-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 10px;
+  width: 350px;
+  max-height: 500px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.notification-header {
+  padding: 15px 20px;
+  border-bottom: 1px solid #e9ecef;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f8f9fa;
+}
+
+.notification-header h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.mark-all-read-btn {
+  background: none;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.mark-all-read-btn:hover {
+  background: #e7f3ff;
+}
+
+.notification-list {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.notification-item {
+  padding: 15px 20px;
+  border-bottom: 1px solid #f0f0f0;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  transition: background 0.2s;
+  position: relative;
+}
+
+.notification-item:hover {
+  background: #f8f9fa;
+}
+
+.notification-item.unread {
+  background: #e7f3ff;
+  font-weight: 500;
+}
+
+.notification-item.unread:hover {
+  background: #d0e7ff;
+}
+
+.notification-content {
+  flex: 1;
+}
+
+.notification-content h4 {
+  margin: 0 0 5px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.notification-content p {
+  margin: 0 0 5px 0;
+  font-size: 13px;
+  color: #666;
+  line-height: 1.4;
+}
+
+.notification-time {
+  font-size: 11px;
+  color: #999;
+}
+
+.notification-dot {
+  width: 8px;
+  height: 8px;
+  background: #007bff;
+  border-radius: 50%;
+  margin-left: 10px;
+  margin-top: 5px;
+  flex-shrink: 0;
+}
+
+.notification-loading,
+.notification-empty {
+  padding: 40px 20px;
+  text-align: center;
+  color: #999;
+  font-size: 14px;
+}
+
+.view-all-notifications {
+  padding: 15px 20px;
+  text-align: center;
+  background: #f8f9fa;
+  border-top: 1px solid #e9ecef;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.view-all-notifications:hover {
+  background: #e9ecef;
+}
+
+/* Scrollbar styling */
+.notification-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.notification-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.notification-list::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
+
+.notification-list::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .notification-dropdown {
+    width: 300px;
+    right: -50px;
+  }
+}
+
