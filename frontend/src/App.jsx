@@ -1,16 +1,6 @@
 import React, { useContext, useEffect } from 'react';
 import axios from 'axios';
 
-// Configuration for Deployment
-// In production, this will use the variable from Vercel/Netlify.
-// In development, it defaults to localhost:5000.
-// You MUST set REACT_APP_API_URL in your Vercel project settings to your Render backend URL.
-axios.defaults.baseURL = process.env.NODE_ENV === 'production'
-  ? (process.env.REACT_APP_API_URL || 'https://luxurystay-backend.onrender.com') // Fallback/Placeholder
-  : 'http://localhost:5000'; // Local backend
-
-// Note: If using the proxy in package.json, we typically don't set this for dev, 
-// but setting it explicitly helps strictly separate frontend/backend for deployment logic.
 
 import { BrowserRouter as Router, Routes, Route, Navigate, Link, useLocation } from 'react-router-dom';
 import { AuthProvider, AuthContext } from './context/AuthContext.jsx';
@@ -43,6 +33,17 @@ import GuestAboutUs from './pages/guest/AboutUs.jsx';
 import Notifications from './pages/Notifications.jsx';
 
 import './App.css';
+
+// Configuration for Deployment
+// In production, this will use the variable from Vercel/Netlify.
+// In development, it defaults to localhost:5000.
+// You MUST set REACT_APP_API_URL in your Vercel project settings to your Render backend URL.
+axios.defaults.baseURL = process.env.NODE_ENV === 'production'
+  ? (process.env.REACT_APP_API_URL || 'https://luxurystay-backend.onrender.com') // Fallback/Placeholder
+  : 'http://localhost:5000'; // Local backend
+
+// Note: If using the proxy in package.json, we typically don't set this for dev, 
+// but setting it explicitly helps strictly separate frontend/backend for deployment logic.
 
 // Home Component
 const Home = () => {
